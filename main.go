@@ -1,19 +1,37 @@
 package main
 
-import "fmt"
+import (
+	"code-kata/exercises"
+	"fmt"
+)
 
 func main() {
-	nums := []int{9, 7, 11, 15}
-	nums2 := []int{3, 2, 4}
-	nums3 := []int{3, 3}
+	intervals := [][]int{
+		{1, 4},
+		{10, 11},
+		{4, 5},
+		{12, 16},
+		{14, 16},
+	}
+	intervals2 := [][]int{
+		{1, 3},
+		{2, 6},
+		{8, 10},
+		{15, 18},
+	}
+	intervals3 := [][]int{
+		{1, 4},
+		{4, 5},
+	}
 
-	var target int = 9
-	var target2 int = 6
-	var target3 int = 6
+	result := exercises.MergeIntervals(intervals)
+	fmt.Println(result)
 
-	findIndex(nums, target)
-	findIndex(nums2, target2)
-	findIndex(nums3, target3)
+	result2 := exercises.MergeIntervals(intervals2)
+	fmt.Println(result2)
+
+	result3 := exercises.MergeIntervals(intervals3)
+	fmt.Println(result3)
 }
 
 /*
