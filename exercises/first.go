@@ -17,6 +17,7 @@ func CheckInArray(nums []int, check int) string {
 }
 
 func BinarySearch(nums []int, target int) string {
+	BubbleSort(nums)
 	first := 0
 	last := len(nums) - 1
 
