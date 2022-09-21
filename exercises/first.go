@@ -1,5 +1,9 @@
 package exercises
 
+import (
+	sort "codekata/sort"
+)
+
 func CheckInArray(nums []int, check int) string {
 	var output string = ""
 
@@ -17,7 +21,7 @@ func CheckInArray(nums []int, check int) string {
 }
 
 func BinarySearch(nums []int, target int) string {
-	BubbleSort(nums)
+	sort.BubbleSort(nums)
 	first := 0
 	last := len(nums) - 1
 

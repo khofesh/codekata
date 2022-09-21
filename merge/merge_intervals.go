@@ -1,4 +1,4 @@
-package exercises
+package merge
 
 import (
 	"fmt"

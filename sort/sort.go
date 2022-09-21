@@ -1,4 +1,4 @@
-package exercises
+package sort
 
 /*
  * sort slice of int using bubble sort

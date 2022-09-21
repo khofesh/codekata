@@ -1,4 +1,4 @@
-package exercises
+package sort
 
 import (
 	"fmt"

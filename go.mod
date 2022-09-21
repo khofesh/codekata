@@ -1,3 +1,3 @@
-module code-kata
+module codekata
 
 go 1.18
