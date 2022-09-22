@@ -1,5 +1,0 @@
-package exercises
-
-func GetIndex() {
-
-}

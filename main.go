@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	nums := []int{9, 7, 11, 15}
+	nums := []int{2, 7, 11, 15}
+	nums1 := []int{2, 11, 7, 15}
 	nums2 := []int{3, 2, 4}
 	nums3 := []int{3, 3}
 
@@ -14,6 +15,10 @@ func main() {
 	findIndex(nums, target)
 	findIndex(nums2, target2)
 	findIndex(nums3, target3)
+
+	index1, index2 := twoSum2(nums1, target)
+	fmt.Printf("index1: %d\n", index1)
+	fmt.Printf("index2: %d\n", index2)
 }
 
 /*
@@ -38,7 +43,7 @@ func findIndex(nums []int, target int) {
 		secondIndex = i + 1
 
 		if nums[i] == target {
-			fmt.Println(i)
+			fmt.Printf("[%d]\n", i)
 		}
 
 		if secondIndex != len(nums) {
@@ -47,11 +52,34 @@ func findIndex(nums []int, target int) {
 				// fmt.Printf("firstIndex: %d\n", firstIndex)
 				// fmt.Printf("secondIndex: %d\n", secondIndex)
 				fmt.Printf("[%d, %d] \n", firstIndex, secondIndex)
-				return
-			} else {
-				fmt.Println("[]")
 			}
 		}
-
 	}
 }
+
+func findSumIndex(nums []int, target int) (int, int) {
+	if len(nums) <= 1 {
+		return -1, -1
+	}
+
+	numToIndex := make(map[int]int, len(nums))
+	for i, num := range nums {
+		if j, ok := numToIndex[num]; ok {
+			return j, i
+		}
+		numToIndex[target-num] = i
+	}
+
+	return -1, -1
+}
+
+// func getUnique(nums []int) int {
+// 	if len(nums) == 1 {
+// 		return 0
+// 	}
+
+// 	numToIndex := make(map[int]int, len(nums))
+// 	for i, num := range nums {
+
+// 	}
+// }
