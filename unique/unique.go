@@ -1,22 +1,8 @@
-package main
+package unique
 
 import "fmt"
 
-func main() {
-	nums1 := []int{2, 2, 1}
-	nums2 := []int{4, 1, 2, 1, 2}
-	nums3 := []int{1}
-
-	res1 := getUnique(nums1)
-	fmt.Println(res1)
-	res2 := getUnique(nums2)
-	fmt.Println(res2)
-	res3 := getUnique(nums3)
-	fmt.Println(res3)
-
-}
-
-func getUnique(nums []int) int {
+func GetUnique(nums []int) int {
 	if len(nums) == 1 {
 		return nums[0]
 	}
