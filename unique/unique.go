@@ -2,9 +2,9 @@ package unique
 
 import "fmt"
 
-func GetUnique(nums []int) int {
+func GetUnique(nums []int) (int, string) {
 	if len(nums) == 1 {
-		return nums[0]
+		return nums[0], ""
 	}
 
 	numToCount := make(map[int]int, len(nums))
@@ -19,9 +19,9 @@ func GetUnique(nums []int) int {
 
 	for key, element := range numToCount {
 		if element == 1 {
-			return key
+			return key, ""
 		}
 	}
 
-	return -1
+	return -1, "not found"
 }
