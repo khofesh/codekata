@@ -34,6 +34,7 @@ func TestGetUnique(t *testing.T) {
 					fmt.Println("TestGetUnique")
 					fmt.Println(test.value)
 					fmt.Println(test.expected1)
+					fmt.Println(test.expected2)
 					t.Fail()
 				}
 			})
