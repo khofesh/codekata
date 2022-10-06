@@ -3,19 +3,19 @@
 verbose output, add `-v` at the end. for example,
 
 ```shell
-go run test ./... -v
+go test ./... -v
 ```
 
 ### run all tests
 
 ```shell
-go run test ./...
+go test ./...
 ```
 
 ### run a specific test
 
 ```shell
-go run test ./exercises/
+go test ./exercises/
 ```
 
 ### benchmark
