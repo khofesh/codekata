@@ -1,0 +1,34 @@
+{
+  "name": "code-kata-unit-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage --collectCoverageFrom='./src/**'"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "./src/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 90
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luispuentesvega/code-kata-unit-testing.git"
+  },
+  "author": "A Slash developer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luispuentesvega/code-kata-unit-testing/issues"
+  },
+  "homepage": "https://github.com/luispuentesvega/code-kata-unit-testing#readme",
+  "devDependencies": {
+    "jest": "^29.1.2"
+  }
+}
