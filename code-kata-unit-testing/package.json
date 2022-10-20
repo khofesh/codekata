@@ -30,5 +30,9 @@
   "homepage": "https://github.com/luispuentesvega/code-kata-unit-testing#readme",
   "devDependencies": {
     "jest": "^29.1.2"
+  },
+  "dependencies": {
+    "axios": "^1.1.2",
+    "dotenv": "^16.0.3"
   }
 }
