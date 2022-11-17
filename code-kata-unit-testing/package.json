@@ -7,17 +7,6 @@
     "test": "jest",
     "test:coverage": "jest --coverage --collectCoverageFrom='./src/**'"
   },
-  "jest": {
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "./src/**"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "lines": 90
-      }
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luispuentesvega/code-kata-unit-testing.git"

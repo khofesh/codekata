@@ -1,29 +1,20 @@
-require("dotenv").config();
+const path = require("path");
+require("dotenv").config({ path: path.resolve("../.env") });
 
-class Helper {
-  //   constructor(firstName, lastName) {
-  //     this.firstName = firstName;
-  //     this.lastName = lastName;
-  //   }
+const greet = (firstName, lastName) => {
+  console.log("getFullName:", getFullName);
+  return `Hello ${getFullName(firstName, lastName)}`;
+};
 
-  greet(firstName, lastName) {
-    return `Hello ${this.getFullName(firstName, lastName)}`;
-  }
+const getFullName = (firstName, lastName) => {
+  return `${firstName} ${lastName}`;
+};
 
-  getFullName(firstName, lastName) {
-    return `${firstName} ${lastName}`;
-  }
+const getRandomNumber = () => Math.random();
 
-  getRandomNumber() {
-    return Math.random();
-  }
-
-  getEnvs() {
-    return {
-      API: process.env.API,
-    };
-  }
-}
+const getEnvs = () => ({
+  API: process.env.API,
+});
 
 /*
 TODO: 
@@ -32,5 +23,8 @@ TODO:
 */
 
 module.exports = {
-  Helper,
+  greet,
+  getEnvs,
+  getFullName,
+  getRandomNumber,
 };

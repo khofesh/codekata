@@ -1,8 +1,8 @@
-const getRandomNumber = (max) => {
+export const getRandomNumber = (max) => {
   return Math.floor(Math.random() * max);
 };
 
-const extractToken = (authToken) => {
+export const extractToken = (authToken) => {
   if (!authToken) {
     return "";
   }
@@ -13,17 +13,10 @@ const extractToken = (authToken) => {
   return parts[1];
 };
 
-const inRange = (value, min, max) => {
+export const inRange = (value, min, max) => {
   return value >= min && value <= max;
 };
 
-const stringToBoolean = (str = "") => {
+export const stringToBoolean = (str = "") => {
   return str.toLowerCase() === "true";
-};
-
-module.exports = {
-  getRandomNumber,
-  extractToken,
-  inRange,
-  stringToBoolean,
 };
