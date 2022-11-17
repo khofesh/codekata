@@ -8,6 +8,8 @@ jest.mock("../session-02/helper.js", () => ({
 }));
 
 describe("# getMovies", () => {
+  beforeEach(() => {});
+
   it("should return users list when axios response is successfully", async () => {
     // Your code here...
     // arrange
@@ -30,6 +32,15 @@ describe("# getMovies", () => {
   });
 
   it("should return error  when there is one error in the endpoint request", async () => {
-    // Your code here...
+    // arrange
+    const message = "network error";
+    axios.get.mockRejectedValueOnce(message);
+
+    // act
+    const result = await getMovies();
+
+    // assert
+    expect(axios.get).toHaveBeenCalledWith("url/api/movies");
+    expect(result).toEqual("Something went wrong when getting movies!");
   });
 });
